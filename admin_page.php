@@ -20,7 +20,7 @@
 ?>
 <html>
 <head>
-<title>ThaiCreate.Com Tutorials</title>
+<title> Test Server </title>
 </head>
 <body>
   Welcome to Admin Page! <br>
