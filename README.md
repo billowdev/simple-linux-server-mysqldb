@@ -49,3 +49,22 @@ mysql> create user ‘youruser’@’localhost’ IDENTIFIED BY ‘thisisyourpas
 <pre>
 mysql> SET GLOBAL validate_password_policy=MEDIUM;
 </pre>
+
+
+-----------------------
+-- FIX phpmyadmin USER can't login
+
+- 1
+<pre>
+sudo mysql -p -u root
+</pre>
+
+- 2 Create USER And assign password
+<pre>
+CREATE USER 'youruser'@'%' IDENTIFIED BY 'thispass';
+</pre>
+
+- 3 Add root to youruser
+<pre>
+GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
+</pre>
