@@ -7,11 +7,13 @@ ref: https://www.thaicreate.com/community/php-mysql-login-form-check-username-pa
 
 
 
+### Fix phpmyadmin not found
+- https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache
+<pre>
+sudo ln -s /usr/share/phpmyadmin /var/www/html
+</pre>
 
-
-
-
--- Fix  ERROR 1819 (HY000)
+### Fix  ERROR 1819 (HY000)
 
 
 - enable the validate_password plugin
@@ -52,7 +54,7 @@ mysql> SET GLOBAL validate_password_policy=MEDIUM;
 
 
 -----------------------
--- FIX phpmyadmin USER can't login
+### FIX phpmyadmin USER can't login
 
 - 1
 <pre>
