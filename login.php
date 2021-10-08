@@ -13,10 +13,10 @@ width:100%;
   background-color: #89ADCB;
 }
 </style>
-<div class="container" style="padding-top:100px">
+<div class="container sbody" style="padding-top:100px">
   <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-4" "sbody">
+    <div class="col-md-4">
       <h3 align="center">
       <span class="glyphicon glyphicon-lock"> </span>
       Form Login </h3>

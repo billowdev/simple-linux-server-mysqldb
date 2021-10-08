@@ -28,6 +28,7 @@ INSERT INTO `member` VALUES (004, 'root', 'root', 'Mr Root Ubuntu', 'ADMIN');
 INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portdee', 'USER');
 </pre>
 
+## Preparing site
 
 #### Clone git in /var/www/html
 <pre>
@@ -44,6 +45,15 @@ mv -v ./testServerPHP/* ./
 <pre>
 rm -r testServerPHP
 </pre>
+
+#### nano to config database
+<pre>
+if not root -> sudo su
+then
+----
+nano connectdb.php
+</pre>
+--------------------------------------------
 
 ### Fix phpmyadmin not found (วิธีแก้หา phpmyadmin ไม่เจอ)
 - https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache
