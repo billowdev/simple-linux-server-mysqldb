@@ -23,7 +23,18 @@ include('pull_bootstrap.php');
       margin: 0 auto; 
       width:250px;
       }
-	  div {text-align: center;}
+	  /* Section Navbar */
+	.navbar { background-color: #26272b; }
+	.navbar .navbar-nav .nav-link { color: #fff; }
+	.navbar .navbar-nav .nav-link:hover { color: #fbc531; }
+	.navbar .navbar-nav .active > .nav-link { color: #fbc531; }
+
+	  /* Section Footer */
+	  .site-footer{
+	background-color: #26272b;
+	color: #737373;
+	padding: 10px;
+	} 
     </style>
 </head>
 <body>

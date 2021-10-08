@@ -5,34 +5,6 @@
 include('pull_bootstrap.php');
 ?>
 
- <!-- Navbar -->
- <nav class="navbar navbar-expand-md fixed-top">
-	<div class="container">
-
-		<a class="navbar-brand text-white " href="./"><img src="https://raw.githubusercontent.com/lacakp/testServerPHP/main/cs63proj.png" height="50px" alt="">Computer Science</a>
-		
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="nvbCollapse">
-			<ul class="navbar-nav ml-auto">
-					<li class="nav-item pl-1">
-					<a class="nav-link" href="./index.html"><i class="fa fa-home fa-fw mr-1"></i>index.html</a>
-				</li>
-				<li class="nav-item active pl-1">
-					<a class="nav-link" href="https://classroom.google.com/"><i class="fa fa-th-list fa-fw mr-1"></i>Google Classroom</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-		<div class="progressContainer">
-				<div class="progressBar"></div>
-		</div>
-
-</nav>
-
 <div class="bg"> </div>
 <div class="container" id="app">
     <div class="row justify-content-center align-items-center vh-100">
