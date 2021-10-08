@@ -4,10 +4,10 @@
 
 include('conectdb.php');
 
-  $Username = $_SESSION['Username'];
+  $UserID = $_SESSION['UserID'];
   $Name = $_SESSION['Name'];
   $Status = $_SESSION['Status'];
- 	if($level!='USER'){
+ 	if($Status!='USER'){
     Header("Location: ../logout.php");  
   }  
 ?>
