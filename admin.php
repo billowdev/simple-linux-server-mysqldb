@@ -18,16 +18,21 @@ include('pull_bootstrap.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminPage</title>
-    
+	<style>
+      form { 
+      margin: 0 auto; 
+      width:250px;
+      }
+    </style>
 </head>
 <body>
 <div class="row justify-content-center">
 
 <div class="card-title">
-    <img src="https://raw.githubusercontent.com/lacakp/testServerPHP/main/cs63proj.png" class="img-fluid d-block mx-auto" alt="logo">
+    <img src="https://raw.githubusercontent.com/lacakp/testServerPHP/main/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
 </div>
 
-<header class="page-header d-flex align-items-center">
+<header class="d-flex align-items-center">
       <div class="container">
           <h1 class="fw-bold"> Welcome ! to หน้าผู้ดูแลระบบ Admin Page </h1>
           <h2> Hello World! สวัสดี ! <?php echo $Name; ?> Your Status is <?php echo $Status; ?> </h2>
@@ -37,13 +42,12 @@ include('pull_bootstrap.php');
 
 </div>
 
-<div class="justify-content-center">
 <form action="logout.php">
   <button type="submit" class="btn btn-danger" id="btn">
   <span class="glyphicon glyphicon-log-out"> </span>
     ออกจากระบบ </button>
 </form>
-</div>
+
 
 </body>
 </html>
