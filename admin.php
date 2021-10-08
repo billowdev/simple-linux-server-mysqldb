@@ -1,8 +1,9 @@
 <!-- admin.php -->
 
 <?php session_start(); 
-include('connectdb.php');
 
+include('connectdb.php');
+include('pull_bootstrap.php');
   $UserID = $_SESSION['UserID'];
   $Name = $_SESSION['Name'];
   $Status = $_SESSION['Status'];
@@ -12,14 +13,36 @@ include('connectdb.php');
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Admin-Page</title>
+<head> 
+	<title>
+  		Admin - Page
+	</title>
 </head>
-<body>
-	<form action="logout.php">
-	<h1>หน้าแอดมิน</h1>
-	<h3> สวัสดี คุณ <?php echo $name; ?> สถานะ <?php echo $level; ?> </h3>
-	<input type="submit" value="ออกจากระบบ">
-	</form>
+
+<style type="text/css">
+#btn{
+width:100%;
+}
+</style>
+
+<div class="container" style="padding-top:100px">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="background-color: #89ADCB">
+      <h3 align="center">
+      <span class="glyphicon glyphicon-lock"> </span>
+      Member - Page </h3>
+		<form action="logout.php">
+		<h1>Welcome ! to หน้าผู้ดูแลระบบ Admin Page </h1>
+		<h3> Hello World! สวัสดีจ้าาา <?php echo $Name; ?> Your Status is <?php echo $Status; ?> </h3>
+			<button type="submit" class="btn btn-danger" id="btn"> 
+				<span class="glyphicon glyphicon-log-out"> </span>
+				Logout
+			</button>
+		</form>
+
+    </div>
+</div>
+</div>
 </body>
 </html>

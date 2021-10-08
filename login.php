@@ -4,41 +4,36 @@
 <?php
 include('pull_bootstrap.php');
 ?>
-<style type="text/css">
-#btn{
-width:100%;
-}
-</style>
 
-<div class="container" style="padding-top:100px">
-  <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4" style="background-color: #89ADCB">
-      <h3 align="center">
-      <span class="glyphicon glyphicon-lock"> </span>
-      Form Login </h3>
-      <form  name="formlogin" action="check_login.php" method="POST" id="login" class="form-horizontal">
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="text"  name="username" class="form-control" required placeholder="Username" />
-          </div>
+
+<div class="bg"> </div>
+<div class="container" id="app">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-md-6">
+            <div class="card py-3 p-lg-5 shadow">
+                <div class="card-title">
+                    <img src="assets/images/textlogo2.png" class="img-fluid d-block mx-auto" alt="logo">
+                </div>
+                <div class="card-body">
+                    <form @submit.prevent="submitLogin">
+                        <div class="row mb-3">
+                            <label for="username" class="col-sm-3" col-form-label>ชื่อผู้ใช้งาน</label>
+                            <div class="col-sm-9">
+                              <input type="text"  name="username" class="form-control" required placeholder="Username" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="password" class="col-sm-3" col-form-label>รหัสผ่าน</label>
+                            <div class="col-sm-9">
+                              <input type="password" name="password" class="form-control" required placeholder="Password" />
+                            </div>
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button class="btn btn-primary"> เข้าสู่ระบบ </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="password" name="password" class="form-control" required placeholder="Password" />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <button type="submit" class="btn btn-primary" id="btn">
-            <span class="glyphicon glyphicon-log-in"> </span>
-             Login </button>
-               <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-               </label>
-          </div>
-        </div>
-      </form>
     </div>
-  </div>
 </div>

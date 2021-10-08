@@ -3,6 +3,7 @@
 <?php session_start();  
 
 include('connectdb.php');
+include('pull_bootstrap.php');
 
   $UserID = $_SESSION['UserID'];
   $Name = $_SESSION['Name'];
@@ -10,10 +11,15 @@ include('connectdb.php');
  	if($Status!='USER'){
     Header("Location: ../logout.php");  
   }  
-  include('pull_bootstrap.php');
 ?>
+
 <!DOCTYPE html>
 <html>
+<head> 
+	<title>
+  		Member-page
+	</title>
+</head>
 
 <style type="text/css">
 #btn{
@@ -29,9 +35,11 @@ width:100%;
       <span class="glyphicon glyphicon-lock"> </span>
       Member - Page </h3>
 		<form action="logout.php">
-		<h1>หน้าสมาชิก</h1>
-		<h3> สวัสดี คุณ <?php echo $name; ?> สถานะ <?php echo $level; ?> </h3>
-		<input type="submit" value="ออกจากระบบ">
+		<h1>Welcome ! to หน้าสมาชิก Member Page</h1>
+		<h3> Hello World! สวัสดีจ้าาา <?php echo $Name; ?> Your Status is <?php echo $Status; ?> </h3>
+		<button type="submit" class="btn btn-danger" id="btn">
+            <span class="glyphicon glyphicon-log-out"> </span>
+             Login </button>
 		</form>
 
     </div>
