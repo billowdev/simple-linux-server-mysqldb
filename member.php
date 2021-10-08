@@ -14,36 +14,33 @@ include('pull_bootstrap.php');
 ?>
 
 <!DOCTYPE html>
-<html>
-<head> 
-	<title>
-  		Member-page
-	</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberPage</title>
+    
 </head>
+<body>
+  
+<header class="page-header d-flex align-items-center">
+      <div class="container">
+          <h1 class="fw-bold"> Welcome ! to หน้าสมาชิก Member Page</h1>
+          <h2>Hello World! สวัสดีจ้าาา <?php echo $Name; ?> Your Status is <?php echo $Status; ?></h2>
+      </div>
+</header>
+<form action="logout.php">
+  <button type="submit" class="btn btn-danger" id="btn">
+  <span class="glyphicon glyphicon-log-out"> </span>
+    ออกจากระบบ </button>
+</form>
 
-<style type="text/css">
-#btn{
-width:100%;
-}
-</style>
-
-<div class="container" style="padding-top:100px">
-  <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4" style="background-color: #89ADCB">
-      <h3 align="center">
-      <span class="glyphicon glyphicon-lock"> </span>
-      Member - Page </h3>
-		<form action="logout.php">
-		<h1>Welcome ! to หน้าสมาชิก Member Page</h1>
-		<h3> Hello World! สวัสดีจ้าาา <?php echo $Name; ?> Your Status is <?php echo $Status; ?> </h3>
-		<button type="submit" class="btn btn-danger" id="btn">
-            <span class="glyphicon glyphicon-log-out"> </span>
-             Login </button>
-		</form>
-
-    </div>
 </div>
 </div>
 </body>
 </html>
+
+
+
+
