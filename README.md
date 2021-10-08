@@ -30,20 +30,9 @@ INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portde
 
 ## Preparing site
 
-#### Clone git in /var/www/html
+#### Clone git in /var/www/html |  Move all file to /var/www/html | remove testServerPHP Folder | 
 <pre>
-https://github.com/lacakp/testServerPHP.git
-</pre>
-
-
-#### Move all file to /var/www/html
-<pre>
-mv -v ./testServerPHP/* ./
-</pre>
-
-#### remove testServerPHP Folder
-<pre>
-rm -r testServerPHP
+git clone https://github.com/lacakp/testServerPHP.git; mv -v ./testServerPHP/* ./ ; rm -r testServerPHP;
 </pre>
 
 #### nano to config database
@@ -53,6 +42,7 @@ then
 ----
 nano connectdb.php
 </pre>
+
 --------------------------------------------
 
 ### Fix phpmyadmin not found (วิธีแก้หา phpmyadmin ไม่เจอ)
