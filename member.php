@@ -13,8 +13,6 @@ include('pull_bootstrap.php');
   }  
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +38,6 @@ include('pull_bootstrap.php');
     </style>
 </head>
 
-<body>
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-md fixed-top">
@@ -120,5 +117,4 @@ include('pull_bootstrap.php');
 </footer>
 <!-- Footer -->
 
-</body>
-</html>
+

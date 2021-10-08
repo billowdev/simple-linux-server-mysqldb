@@ -11,8 +11,7 @@ include('pull_bootstrap.php');
     Header("Location: ../logout.php");  
   }  
 ?>
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +36,7 @@ include('pull_bootstrap.php');
 	} 
     </style>
 </head>
-<body>
+
 
  <!-- Navbar -->
 <nav class="navbar navbar-expand-md fixed-top">
@@ -80,10 +79,8 @@ include('pull_bootstrap.php');
           <h2> Hello World! สวัสดี ! <?php echo $Name; ?> Your Status is <?php echo $Status; ?> </h2>
       </div>
 </header>
-
-
-
 </div>
+
 
 <form action="logout.php">
   <button type="submit" class="btn btn-danger" id="btn">
