@@ -34,7 +34,7 @@ include('pull_bootstrap.php');
 
 <header class="d-flex align-items-center">
       <div class="container">
-          <h1 class="fw-bold"> class="fw-bold"> Welcome ! to หน้าสมาชิก Member Page </h1>
+          <h1 class="fw-bold" class="fw-bold"> Welcome ! to หน้าสมาชิก Member Page </h1>
           <h2> Hello World! สวัสดี ! <?php echo $Name; ?> Your Status is <?php echo $Status; ?> </h2>
       </div>
 </header>

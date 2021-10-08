@@ -5,11 +5,16 @@ testServerPHP - Operating System Subject - VMware Ubuntu Server - phpmyadmin - m
 
 ### CREATE DB
 <pre>
-
+CREATE database mydatabase;
 </pre>
 
-### CREATE TABLE
+### USE DATABASE
+<pre>
+USE mydatabase;
+</pre>
 
+
+### CREATE TABLE
 <pre>
 CREATE TABLE `member` (
   `UserID` int(3) unsigned zerofill NOT NULL auto_increment,
