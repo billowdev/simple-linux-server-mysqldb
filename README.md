@@ -1,8 +1,26 @@
 # testServerPHP
-testServerPHP
+testServerPHP - Operating System Subject - VMware Ubuntu Server - phpmyadmin - mysql
 
-ref: https://www.thaicreate.com/community/php-mysql-login-form-check-username-password.html
+## LEARNING SITE : https://www.w3schools.com/
 
+### CREATE DB
+<pre>
+
+</pre>
+
+### CREATE TABLE
+
+<pre>
+CREATE TABLE `member` (
+  `UserID` int(3) unsigned zerofill NOT NULL auto_increment,
+  `Username` varchar(20) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Status` enum('ADMIN','USER') NOT NULL default 'USER',
+  PRIMARY KEY  (`UserID`),
+  UNIQUE KEY `Username` (`Username`)
+) ENGINE=MyISAM  AUTO_INCREMENT=3 ;
+</pre>
 
 
 
