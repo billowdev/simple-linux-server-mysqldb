@@ -3,7 +3,7 @@
 <?php 
 session_start();
         if(isset($_POST['username'])){
-                  include("conectdb.php");
+                  include("connectdb.php");
                   $username = $_POST['username'];
                   $password = $_POST['password'];
 

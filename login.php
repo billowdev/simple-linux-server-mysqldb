@@ -33,7 +33,7 @@ width:100%;
         </div>
         <div class="form-group">
           <div class="col-sm-12">
-            <button type="submit" class="btn btn-success" id="btn">
+            <button type="submit" class="btn btn-primary" id="btn">
             <span class="glyphicon glyphicon-log-in"> </span>
              Login </button>
                <label>

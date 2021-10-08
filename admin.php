@@ -1,7 +1,7 @@
 <!-- admin.php -->
 
 <?php session_start(); 
-include('conectdb.php');
+include('connectdb.php');
 
   $UserID = $_SESSION['UserID'];
   $Name = $_SESSION['Name'];
