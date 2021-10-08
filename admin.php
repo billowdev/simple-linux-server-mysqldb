@@ -1,6 +1,7 @@
 <!-- admin.php -->
+
 <?php session_start(); 
-include('condb.php');
+include('conectdb.php');
 
   $UserID = $_SESSION['UserID'];
   $Name = $_SESSION['Name'];

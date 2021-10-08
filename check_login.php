@@ -36,7 +36,7 @@ session_start();
                   }
         }else{
 
-             Header("Location: index.php"); 
+             Header("Location: login.php"); 
  
         }
 ?>
