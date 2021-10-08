@@ -1,30 +1,42 @@
-<?php
-	session_start();
-	mysql_connect("localhost","root","root");
-	mysql_select_db("mydatabase");
-	$strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_POST['txtUsername'])."' 
-	and Password = '".mysql_real_escape_string($_POST['txtPassword'])."'";
-	$objQuery = mysql_query($strSQL);
-	$objResult = mysql_fetch_array($objQuery);
-	if(!$objResult)
-	{
-			echo "Username and Password Incorrect!";
-	}
-	else
-	{
-			$_SESSION["UserID"] = $objResult["UserID"];
-			$_SESSION["Status"] = $objResult["Status"];
+<!-- check_login.php -->
 
-			session_write_close();
-			
-			if($objResult["Status"] == "ADMIN")
-			{
-				header("location:admin_page.php");
-			}
-			else
-			{
-				header("location:user_page.php");
-			}
-	}
-	mysql_close();
+<?php 
+session_start();
+        if(isset($_POST['username'])){
+                  include("conectdb.php");
+                  $username = $_POST['username'];
+                  $password = $_POST['password'];
+
+                  $sql="SELECT * FROM login 
+                  WHERE  Username='".$username."' 
+                  AND  Password='".$password."' ";
+                  $result = mysqli_query($con,$sql);
+				
+                  if(mysqli_num_rows($result)==1){
+                      $row = mysqli_fetch_array($result);
+
+                      $_SESSION["Username"] = $row["Username"];
+                      $_SESSION["Name"] = $row["Name"];
+                      $_SESSION["Status"] = $row["Status"];
+
+                      if($_SESSION["Status"]=="ADMIN"){ 
+
+                        Header("Location: admin.php");
+                      }
+                  if ($_SESSION["Status"]=="USER"){ 
+
+                        Header("Location: member.php");
+                      }
+                  }else{
+                    echo "<script>";
+                        echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 
+                        echo "window.history.back()";
+                    echo "</script>";
+ 
+                  }
+        }else{
+
+             Header("Location: index.php"); 
+ 
+        }
 ?>
