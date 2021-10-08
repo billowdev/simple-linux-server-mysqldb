@@ -12,7 +12,7 @@ include('pull_bootstrap.php');
         <div class="col-md-6">
             <div class="card py-3 p-lg-5 shadow">
                 <div class="card-title">
-                    <img src="assets/images/textlogo2.png" class="img-fluid d-block mx-auto" alt="logo">
+                    <img src="https://github.com/lacakp/testServerPHP/blob/26fb06290e350f316044612b4acb402e33cff369/cs63proj.png" class="img-fluid d-block mx-auto" alt="logo">
                 </div>
                 <div class="card-body">
                     <form name="formlogin" action="check_login.php" method="POST" id="login">

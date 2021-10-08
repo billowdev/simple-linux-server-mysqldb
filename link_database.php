@@ -1,5 +1,5 @@
-<?php
-$dbServerName = "192.168.xx.xxx"; // ip address (hostname -I)
+<?php       
+$dbServerName = "192.168.48.132"; // ip address (hostname -I)
 $dbUsername = "root"; // username
 $dbPassword = "thisispass"; // db pass
 $dbName = "mydatabase"; // your database to connect
