@@ -13,8 +13,8 @@ testServerPHP - Operating System Subject - VMware Ubuntu Server - phpmyadmin - m
 <pre>
 CREATE TABLE `member` (
   `UserID` int(3) unsigned zerofill NOT NULL auto_increment,
-  `Username` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
+  `Username` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
   `Name` varchar(100) NOT NULL,
   `Status` enum('ADMIN','USER') NOT NULL default 'USER',
   PRIMARY KEY  (`UserID`),
@@ -22,17 +22,56 @@ CREATE TABLE `member` (
 ) ENGINE=MyISAM  AUTO_INCREMENT=3 ;
 </pre>
 
+#### INSERT USER AND ADMIN DATA
+<pre>
+INSERT INTO `member` VALUES (004, 'root', 'root', 'Mr Root Ubuntu', 'ADMIN');
+INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portdee', 'USER');
+</pre>
 
 
+#### Clone git in /var/www/html
+<pre>
+https://github.com/lacakp/testServerPHP.git
+</pre>
 
-### Fix phpmyadmin not found
+
+#### Move all file to /var/www/html
+<pre>
+mv -v ./testServerPHP/* ./
+</pre>
+
+#### remove testServerPHP Folder
+<pre>
+rm -r testServerPHP
+</pre>
+
+### Fix phpmyadmin not found (วิธีแก้หา phpmyadmin ไม่เจอ)
 - https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache
 <pre>
 sudo ln -s /usr/share/phpmyadmin /var/www/html
 </pre>
 
-### Fix  ERROR 1819 (HY000)
 
+-----------------------
+### FIX phpmyadmin USER can't login ( แก้ ไม่สามารถเข้า phpmyadmin ได้)
+
+- 1
+<pre>
+sudo mysql -p -u root
+</pre>
+
+- 2 Create USER And assign password
+<pre>
+CREATE USER 'youruser'@'%' IDENTIFIED BY 'thispass';
+</pre>
+
+- 3 Add root to youruser
+<pre>
+GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
+</pre>
+
+-------------------------
+### Fix  ERROR 1819 (HY000) (แก้ Error policy password เราจะเปลี่ยนให้มัน low)
 
 - enable the validate_password plugin
 <pre>
@@ -65,26 +104,10 @@ mysql> create user ‘youruser’@’localhost’ IDENTIFIED BY ‘thisisyourpas
 
 
 -----------------------
-- revert to the ‘MEDIUM’ password policy
+- revert to the ‘MEDIUM’ password policy (กลับคืนค่าของ policy)
 <pre>
 mysql> SET GLOBAL validate_password_policy=MEDIUM;
 </pre>
 
 
------------------------
-### FIX phpmyadmin USER can't login
 
-- 1
-<pre>
-sudo mysql -p -u root
-</pre>
-
-- 2 Create USER And assign password
-<pre>
-CREATE USER 'youruser'@'%' IDENTIFIED BY 'thispass';
-</pre>
-
-- 3 Add root to youruser
-<pre>
-GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
-</pre>
