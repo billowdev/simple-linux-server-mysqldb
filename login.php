@@ -15,7 +15,8 @@ include('pull_bootstrap.php');
                     <img src="assets/images/textlogo2.png" class="img-fluid d-block mx-auto" alt="logo">
                 </div>
                 <div class="card-body">
-                    <form @submit.prevent="submitLogin">
+                    <form name="formlogin" action="check_login.php" method="POST" id="login">
+
                         <div class="row mb-3">
                             <label for="username" class="col-sm-3" col-form-label>ชื่อผู้ใช้งาน</label>
                             <div class="col-sm-9">
