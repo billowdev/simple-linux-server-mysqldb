@@ -186,7 +186,7 @@ CREATE TABLE `member` (
   `Status` enum('ADMIN','USER') NOT NULL default 'USER',
   PRIMARY KEY  (`UserID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=MyISAM  AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  AUTO_INCREMENT=3;
 </pre>
 
 #### INSERT USER AND ADMIN DATA
@@ -239,7 +239,7 @@ ls -al
      style="width=400px" />
      
 #### nano to config database ( เข้าไปแก้ไข เปลี่ยน ip-user-password-database)
-#### ใน tutorial นี้ได้ตั้งไว้คือ (192.168.xx.xxx, testuser, root1234, mydatabasee)
+#### ใน tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabasee)
 
 <pre>
 nano connectdb.php
@@ -321,7 +321,7 @@ SHOW GRANTS FOR myuser;
 FLUSH PRIVILEGES;
 </pre>
 
-#### revert to the ‘MEDIUM’ password policy (กลับคืนค่าของ policy)
+### revert to the ‘MEDIUM’ password policy (ในกรณีอยากกลับคืนค่าของ policy กลับปเป็น MEDIUM หรือ Strong)
 
 <pre>
 SET GLOBAL validate_password_policy=MEDIUM;
