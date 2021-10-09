@@ -249,11 +249,16 @@ ls -al
      style="width=400px" />
      
 #### nano to config database ( เข้าไปแก้ไข เปลี่ยน ip-user-password-database)
-#### ใน tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabasee)
+#### ใน tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabase) MySQL default port is 3306
 
 <pre>
 nano connectdb.php
 </pre>
+
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/nanoconnectdb.png"
+     alt="login-page"
+     style="width=400px" />
+
 
 #### วิธี save
 <pre>
@@ -267,7 +272,7 @@ nano connectdb.php
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/loginphp.png"
      alt="login-page"
      style="width=400px" />
-#### 
+
 
 
 -----------------------------------------------------------
