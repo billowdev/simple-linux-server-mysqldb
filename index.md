@@ -119,18 +119,13 @@ apt install phpmyadmin -y
      alt="result"
      style="width=400px" />
 
+### If error 1819 (HY000) scroll down to check (ถ้า Error เลื่อนลงไปดู ข้างล่างครับ)
+
+
 ### จากนั้นเราจะทำการใช้ mysql
 #### 6. use mysql
 <pre>
 mysql
-</pre>
-#### 6.1 Create USER for database
-<pre>
-CREATE USER 'testuser'@'%' IDENTIFIED BY 'root1234';
-GRANT ALL PRIVILEGES ON *. * TO 'testuser'@'%' WITH GRANT OPTION;
-SHOW GRANTS FOR testuser;
-FLUSH PRIVILEGES;
-
 </pre>
 
 #### Exit mysql
@@ -149,15 +144,6 @@ exit
 <pre>
 id: phpmyadmin
 pass: yourpassword
-</pre>
-
-#### ถ้าหากว่าได้ทำการพิมพ์บรรทัดในหัวข้อ
-#### 6.1 Create USER for database
-#### จะสามารถใช้ user ด้านล่างได้ครับ
-
-<pre>
-testuser
-root1234
 </pre>
 
 -----------------------------------------------------------
@@ -318,8 +304,7 @@ SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_n
 
 <pre>
 SET GLOBAL validate_password_policy=LOW;
-OR
-SET GLOBAL validate_password_policy=0;
+SET GLOBAL validate_password.policy=LOW;
 </pre>
 
 #### confirm the password validation policy level.
@@ -328,10 +313,12 @@ SET GLOBAL validate_password_policy=0;
 SHOW VARIABLES LIKE 'validate_password%';
 </pre>
 
-#### Assign password
-
+#### Create User
 <pre>
-create user ‘youruser’@’localhost’ IDENTIFIED BY ‘thisisyourpassword’;
+create user ‘myuser’@’%’ IDENTIFIED BY ‘root1234’;
+GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' WITH GRANT OPTION;
+SHOW GRANTS FOR myuser;
+FLUSH PRIVILEGES;
 </pre>
 
 #### revert to the ‘MEDIUM’ password policy (กลับคืนค่าของ policy)
