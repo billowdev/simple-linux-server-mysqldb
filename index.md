@@ -346,7 +346,7 @@ SET GLOBAL validate_password_policy=MEDIUM;
 
 
 
-# Tesing 
+# Testing 
 
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-1.png"
      alt="Apache2"
