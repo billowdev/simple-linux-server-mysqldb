@@ -1,4 +1,4 @@
-# simple-linux-server-phpmysql
+# simple-linux-server-mysqldb
 #### Operating System Subject - VMware Ubuntu Server - phpmyadmin - mysql
 
 ### LEARNING SITE : https://www.w3schools.com/
