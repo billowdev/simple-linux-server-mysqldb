@@ -2,12 +2,12 @@
 
 <?php
 
-// ip address (hostname -I) : example 192.168.48.133
-// username example : phpmyadmin
-// db pass exsample : codetopanda123456789
-// your database to connect
+$dbServerName = "192.168.48.132"; // ip address (hostname -I)
+$dbUsername = "root"; // username
+$dbPassword = "thisispass"; // db pass
+$dbName = "mydatabase"; // your database to connect
 
-$con= mysqli_connect("192.168.48.133", "testuser", "root1234", "mydatabase") or die("Error ! : " . mysqli_error($con));
+$con= mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName) or die("Error ! : " . mysqli_error($con));
 mysqli_query($con, "SET NAMES 'utf8' ");
 error_reporting( error_reporting() & ~E_NOTICE );
 date_default_timezone_set('Asia/Bangkok');
