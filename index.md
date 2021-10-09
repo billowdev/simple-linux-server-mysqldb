@@ -23,6 +23,16 @@ apt upgrade -y
 <pre>
 apt install apache2 -y
 </pre>
+
+### install php
+<pre>
+apt install php php-cgi libapache2-mode-php php-common php-pear php-mbstring
+
+a2enconf php7.4-cgi
+
+systemctl reload apache2.service
+</pre>
+
 <pre>
 ufw allow 'Apache'
 </pre>
