@@ -32,11 +32,7 @@ include('connectdb.php');
 <div class="row justify-content-center">
 
 <div class="card-title">
-<<<<<<< HEAD
-    <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
-=======
-    <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/main/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
->>>>>>> 2e6cda4feae8fc4d9d3c9d293969700ca4a49967
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
 </div>
 
 <header class="d-flex align-items-center">
