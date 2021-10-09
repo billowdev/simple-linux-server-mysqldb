@@ -181,6 +181,7 @@ exit
 <pre>
 cd /var/www/html
 </pre>
+
 #### check git เพื่อความชัวร์ทำการเช็คว่า linux ท่านใช้ gitได้ไหม 
 
 <pre>
@@ -199,9 +200,10 @@ git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; mv -v ./sim
      style="width=400px" />
 
 #### Check file (ทำการเช็คไฟล์ในโฟลเดอร์ )
+
 <pre>
 ls -al
-</pre
+</pre>
 
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/ls-al.png"
      alt="ls-al"
