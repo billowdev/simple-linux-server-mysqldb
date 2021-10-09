@@ -46,21 +46,6 @@ hostname -I
 apt install mysql-server -y
 </pre>
 
-##### จากนั้นเราจะทำการใช้ mysql
-#### use mysql
-<pre>
-mysql -p -u root
-</pre>
-#### Create USER for database
-<pre>
-CREATE USER 'testuser'@'%' IDENTIFIED BY 'root1234';
-</pre>
-
-#### Exit mysql
-<pre>
-exit
-</pre>
-
 #### install phpmyadmin
 <pre>
 apt install phpmyadmin -y
@@ -92,13 +77,28 @@ apt install phpmyadmin -y
      alt="result"
      style="width=400px" />
 
-#### 6. เข้าไปหน้า phpmyadmin
+##### จากนั้นเราจะทำการใช้ mysql
+#### 6. use mysql
+<pre>
+mysql
+</pre>
+#### Create USER for database
+<pre>
+CREATE USER 'testuser'@'%' IDENTIFIED BY 'root1234';
+</pre>
+
+#### Exit mysql
+<pre>
+exit
+</pre>
+
+#### 7. เข้าไปหน้า phpmyadmin
 
 <pre>
 192.168.xx.xxx/phpmyadmin
 </pre>
 
-#### 7. login phpmyadmin (เข้าสู่ระบบ phpmyadmin)
+#### 8. login phpmyadmin (เข้าสู่ระบบ phpmyadmin)
 
 <pre>
 id: phpmyadmin
@@ -115,11 +115,11 @@ root1234
 </pre>
 
 -----------------------------------------------------------
-#### Fix phpmyadmin not found (วิธีแก้หา phpmyadmin ไม่เจอ)
+#### Fix phpmyadmin not found (วิธีแก้หากหา phpmyadmin ไม่เจอ)
 #####  [ref : how-to-solve-the-phpmyadmin](https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache)
 
 <pre>
-sudo ln -s /usr/share/phpmyadmin /var/www/html
+ln -s /usr/share/phpmyadmin /var/www/html
 </pre>
 -----------------------------------------------------------
 #### ทำการสร้าง database
@@ -177,6 +177,12 @@ exit
 <pre>
 cd /var/www/html
 </pre>
+#### check git เพื่อความชัวร์ทำการเช็คว่า linux ท่านใช้ gitได้ไหม 
+
+<pre>
+git (if git not install ) then
+apt install git
+</pre>
 
 #### Clone git in /var/www/html |  Move all file to /var/www/html | remove simple-linux-server-mysqldb Folder | 
 
@@ -184,6 +190,19 @@ cd /var/www/html
 git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; mv -v ./simple-linux-server-mysqldb/* ./ ; rm -r simple-linux-server-mysqldb;
 </pre>
 
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/clone.png"
+     alt="Clone"
+     style="width=400px" />
+
+#### Check file (ทำการเช็คไฟล์ในโฟลเดอร์ )
+<pre>
+ls -al
+</pre
+
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/ls-al.png"
+     alt="ls-al"
+     style="width=400px" />
+     
 #### nano to config database ( เข้าไปแก้ไข เปลี่ยน ip-user-password-database)
 #### ใน tutorial นี้ได้ตั้งไว้คือ (192.168.xx.xxx, testuser, root1234, mydatabasee)
 
@@ -191,6 +210,19 @@ git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; mv -v ./sim
 nano connectdb.php
 </pre>
 
+#### วิธี save
+<pre>
+1. CTRL + x
+2. y
+3. Enter
+</pre>
+
+
+#### เข้าไปใน 192.168.xx.xxx/login.php
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/loginphp.png"
+     alt="login-page"
+     style="width=400px" />
+#### 
 
 
 -----------------------------------------------------------
