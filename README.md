@@ -1,5 +1,6 @@
 # Linux Server simple login system with mysql
-##  Operating System Subject ###### VMware Ubuntu Server - phpmyadmin - mysql
+##  Operating System Subject 
+###### VMware Ubuntu Server - phpmyadmin - mysql
 
 ## LEARNING SITE : https://www.w3schools.com/
 
