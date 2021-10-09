@@ -19,7 +19,7 @@ include('connectdb.php');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit" >
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/css/sytle.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/refcss/sytle.css">
     <title>Member-Page</title>
 	<style>
       form { 
@@ -32,7 +32,7 @@ include('connectdb.php');
 <div class="row justify-content-center">
 
 <div class="card-title">
-<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
 </div>
 
 <header class="d-flex align-items-center">
