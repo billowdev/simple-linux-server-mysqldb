@@ -23,6 +23,7 @@ apt upgrade -y
 <pre>
 apt install apache2 -y
 </pre>
+
 <pre>
 ufw allow 'Apache'
 </pre>
@@ -38,7 +39,8 @@ hostname -I
 #### ลองพิมพ์ ip ที่ได้จากคำสั่ง hostname -I ใน url ของ browser
 <pre>
 192.168.xx.xxx
-<pre>
+</pre>
+
 ##### ถ้าปรากฎหน้า apache แสดงว่าใช้งานได้ครับ
 
 ### install mysql (ทำการติดตั้ง mysql)
@@ -67,23 +69,23 @@ apt install phpmyadmin -y
 </pre>
 
 #### 1. Select Apache2
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/1-apache2.png")
+![alt text]("/assets/images/1-apache2.png")
 
 #### 2.Select yes
 
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/2-yes.png"/>
+![alt text]("/assets/images/2-yes.png"/>
 
 #### 3.type your password for phpmyadmin (ในที่นี้จะพิมพ์ codetopanda123456789 ซึ่งยาวพอตัว เพราะถ้าพิมพ์สั้นไปมันจะ Error ซึ่งต้องแก้ไข policy จะมีวิธีบอกอยู่ด้านล่างครับ : ) )
 
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/3-password-ok.png"/>
+![alt text]("/assets/images/3-password-ok.png"/>
 
 #### 4. confirm password (พิมพ์รหัสผ่านอีกครั้งเพื่อ confirm)
 
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/4-password-confirm-ok.png"/>
+![alt text]("/assets/images/4-password-confirm-ok.png"/>
 
 #### 5. if not error it finished (ถ้าไม่เกิดข้อผิดพลาดใดๆ ถือว่าเสร็จสิ้น ถ้าเกิดข้อผิดพลาดลอง อ่านโค้ด Error แล้วลอง เลื่อนลงไปด้านล่าง ถ้าข้อผิดพลาดนั้นไม่ได้มี ใน tutorialนี้ ลอง Search Google เพื่อแก้ดูครับ น่าจะไม่ยากเกินความสามารถครับ :) )
 
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/5-finished.png"/>
+![alt text]("/assets/images/5-finished.png"/>
 
 #### 6. เข้าไปหน้า phpmyadmin
 
