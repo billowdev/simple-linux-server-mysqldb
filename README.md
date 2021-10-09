@@ -4,6 +4,41 @@
 
 ##  [LEARNING SITE : w3schools](https://www.w3schools.com/)
 
+#### Change to root
+<pre>
+sudo su
+</pre>
+
+### after install your linux-server
+<pre>
+apt update
+apt upgrade
+</pre>
+
+##### [More Detail - How To Install the Apache Web Server on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04)
+
+#### install apache2
+<pre>
+apt install apache2
+</pre>
+<pre>
+ufw allow 'Apache'
+</pre>
+#### make sure the service is running
+<pre>
+systemctl status apache2
+</pre>
+#### Check IP addresses
+<pre>
+hostname -I
+</pre>
+
+
+#### use mysql
+<pre>
+mysql
+</pre>
+
 #### CREATE DB
 <pre>
 CREATE database mydatabase;
