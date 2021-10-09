@@ -3,7 +3,7 @@ testServerPHP - Operating System Subject - VMware Ubuntu Server - phpmyadmin - m
 
 ### LEARNING SITE : https://www.w3schools.com/
 
-### go to tutorial: 
+### Go to tutorial: 
 
 ### https://lacakp.github.io/testServerPHP/
 
