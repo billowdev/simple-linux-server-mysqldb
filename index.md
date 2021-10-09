@@ -82,7 +82,7 @@ apt install phpmyadmin -y
 <pre>
 mysql
 </pre>
-#### Create USER for database
+#### 6.1 Create USER for database
 <pre>
 CREATE USER 'testuser'@'%' IDENTIFIED BY 'root1234';
 GRANT ALL PRIVILEGES ON *. * TO 'testuser'@'%' WITH GRANT OPTION;
@@ -110,7 +110,7 @@ pass: yourpassword
 </pre>
 
 #### ถ้าหากว่าได้ทำการพิมพ์บรรทัดในหัวข้อ
-#### Create USER for database
+#### 6.1 Create USER for database
 #### จะสามารถใช้ user ด้านล่างได้ครับ
 
 <pre>
