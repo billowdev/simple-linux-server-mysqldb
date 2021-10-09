@@ -29,7 +29,7 @@ include('pull_bootstrap.php');
 <div class="row justify-content-center">
 
 <div class="card-title">
-    <img src="https://raw.githubusercontent.com/lacakp/testServerPHP/main/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
+    <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/main/cs63proj.png" width="300px" class="img-fluid d-block mx-auto" alt="logo">
 </div>
 
 <header class="d-flex align-items-center">
