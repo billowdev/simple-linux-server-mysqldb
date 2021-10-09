@@ -19,7 +19,7 @@ apt upgrade -y
 
 ##### [More Detail - How To Install the Apache Web Server on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04)
 
-#### install apache2 (ทำการติดตั้ง apache2)
+### install apache2 (ทำการติดตั้ง apache2)
 <pre>
 apt install apache2 -y
 </pre>
@@ -46,7 +46,49 @@ hostname -I
 apt install mysql-server -y
 </pre>
 
-#### install phpmyadmin
+#### check mysql server is running
+<pre>
+systemctl status mysql
+</pre>
+
+#### security-related operations.
+<pre>
+mysql_secure_installation
+</pre>
+
+#### 1. yes : y
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/1-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+#### 2. select low : 0
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/2-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+#### 3. after you enter password then : y
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/3-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+
+#### 4. remove anonymous user : y
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/4-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+#### 5. disallow root remote : y
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/5-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+#### 6. remove test db: y
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/6-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+
+#### 7. reload db: y
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/7-mysql-secure.png"
+     alt="Apache2"
+     style="width=400px" />
+
+
+### install phpmyadmin
 <pre>
 apt install phpmyadmin -y
 </pre>
@@ -77,7 +119,7 @@ apt install phpmyadmin -y
      alt="result"
      style="width=400px" />
 
-##### จากนั้นเราจะทำการใช้ mysql
+### จากนั้นเราจะทำการใช้ mysql
 #### 6. use mysql
 <pre>
 mysql
@@ -102,7 +144,7 @@ exit
 192.168.xx.xxx/phpmyadmin
 </pre>
 
-#### 8. login phpmyadmin (เข้าสู่ระบบ phpmyadmin)
+### 8. login phpmyadmin (เข้าสู่ระบบ phpmyadmin)
 
 <pre>
 id: phpmyadmin
@@ -119,14 +161,15 @@ root1234
 </pre>
 
 -----------------------------------------------------------
-#### Fix phpmyadmin not found (วิธีแก้หากหา phpmyadmin ไม่เจอ)
+### Fix phpmyadmin not found (วิธีแก้หากหา phpmyadmin ไม่เจอ)
 #####  [ref : how-to-solve-the-phpmyadmin](https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache)
 
 <pre>
 ln -s /usr/share/phpmyadmin /var/www/html
 </pre>
 -----------------------------------------------------------
-#### ทำการสร้าง database
+
+### ทำการสร้าง database
 
 #### use mysql
 
@@ -175,7 +218,7 @@ exit
 
 -----------------------------------------------------------
 
-#### Preparing site change directory to /var/www/html
+### Preparing site change directory to /var/www/html
 ###### เปลี่ยนโฟล์เดอร์ไปที่ path /var/www/html
 
 <pre>
@@ -224,7 +267,7 @@ nano connectdb.php
 </pre>
 
 
-#### เข้าไปใน 192.168.xx.xxx/login.php
+### เข้าไปใน 192.168.xx.xxx/login.php
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/loginphp.png"
      alt="login-page"
      style="width=400px" />
@@ -233,12 +276,12 @@ nano connectdb.php
 
 -----------------------------------------------------------
 
-## FIX phpmyadmin USER can't login ( แก้ ไม่สามารถเข้า phpmyadmin ได้)
+### FIX phpmyadmin USER can't login ( แก้ ไม่สามารถเข้า phpmyadmin ได้)
 
 ###### mysql
 
 <pre>
-sudo mysql -p -u root
+mysql -p -u root
 </pre>
 
 ###### 2 Create USER And assign password
@@ -255,46 +298,46 @@ GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
 
 -----------------------------------------------------------
 
-#### Fix  ERROR 1819 (HY000) (แก้ Error policy password เราจะเปลี่ยนให้มัน low)
+### Fix  ERROR 1819 (HY000) (แก้ Error policy password เราจะเปลี่ยนให้มัน low)
 
-###### enable the validate_password plugin
+#### enable the validate_password plugin
 
 <pre>
-mysql> SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
-mysql> install plugin validate_password SONAME 'validate_password.so';
+SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
+install plugin validate_password SONAME 'validate_password.so';
 </pre>
 
-###### check plugin is activated?
+#### check plugin is activated?
 
 <pre>
-mysql> SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
+SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
 </pre>
 
 
-###### set a lower password validation policy
+#### set a lower password validation policy
 
 <pre>
-mysql> SET GLOBAL validate_password_policy=LOW;
+SET GLOBAL validate_password_policy=LOW;
 OR
-mysql> SET GLOBAL validate_password_policy=0;
+SET GLOBAL validate_password_policy=0;
 </pre>
 
-###### confirm the password validation policy level.
+#### confirm the password validation policy level.
 
 <pre>
 SHOW VARIABLES LIKE 'validate_password%';
 </pre>
 
-###### Assign password
+#### Assign password
 
 <pre>
-mysql> create user ‘youruser’@’localhost’ IDENTIFIED BY ‘thisisyourpassword’;
+create user ‘youruser’@’localhost’ IDENTIFIED BY ‘thisisyourpassword’;
 </pre>
 
-###### revert to the ‘MEDIUM’ password policy (กลับคืนค่าของ policy)
+#### revert to the ‘MEDIUM’ password policy (กลับคืนค่าของ policy)
 
 <pre>
-mysql> SET GLOBAL validate_password_policy=MEDIUM;
+SET GLOBAL validate_password_policy=MEDIUM;
 </pre>
 
 
