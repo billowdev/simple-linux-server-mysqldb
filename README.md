@@ -2,7 +2,7 @@
 ##  Operating System Subject 
 ###### VMware Ubuntu Server - phpmyadmin - mysql
 
-## LEARNING SITE : https://www.w3schools.com/
+##  : [LEARNING SITE](https://www.w3schools.com/)
 
 #### CREATE DB
 <pre>
