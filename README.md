@@ -5,7 +5,7 @@
 
 ### Go to tutorial: 
 
-### https://lacakp.github.io/testServerPHP/
+### https://lacakp.github.io/simple-linux-server-phpmysql/
 
 ### Repository-site
-### https://github.com/lacakp/testServerPHP/tree/site
+### https://github.com/lacakp/simple-linux-server-phpmysql/tree/site
