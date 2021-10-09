@@ -2,7 +2,7 @@
 ##  Operating System Subject 
 ###### VMware Ubuntu Server - phpmyadmin - mysql
 
-##  : [LEARNING SITE](https://www.w3schools.com/)
+##  [LEARNING SITE : w3schools](https://www.w3schools.com/)
 
 #### CREATE DB
 <pre>
@@ -51,7 +51,7 @@ nano connectdb.php
 
 
 #### Fix phpmyadmin not found (วิธีแก้หา phpmyadmin ไม่เจอ)
-##### https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache
+#####  [ref : how-to-solve-the-phpmyadmin](https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache)
 <pre>
 sudo ln -s /usr/share/phpmyadmin /var/www/html
 </pre>
