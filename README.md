@@ -67,23 +67,30 @@ apt install phpmyadmin -y
 </pre>
 
 #### 1. Select Apache2
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/1-apache2.png")
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/1-apache2.png"
+     alt="Apache2"
+     style="width=400px" />
 
 #### 2.Select yes
-
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/2-yes.png"/>
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/2-yes.png"
+     alt="Apache2"
+     style="width=400px" />
 
 #### 3.type your password for phpmyadmin (ในที่นี้จะพิมพ์ codetopanda123456789 ซึ่งยาวพอตัว เพราะถ้าพิมพ์สั้นไปมันจะ Error ซึ่งต้องแก้ไข policy จะมีวิธีบอกอยู่ด้านล่างครับ : ) )
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/3-password-ok.png"
+     alt="Apache2"
+     style="width=400px" />
 
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/3-password-ok.png"/>
 
 #### 4. confirm password (พิมพ์รหัสผ่านอีกครั้งเพื่อ confirm)
-
-![alt text]("https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/4-password-confirm-ok.png"/>
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/4-password-confirm-ok.png"
+     alt="Apache2"
+     style="width=400px" />
 
 #### 5. if not error it finished (ถ้าไม่เกิดข้อผิดพลาดใดๆ ถือว่าเสร็จสิ้น ถ้าเกิดข้อผิดพลาดลอง อ่านโค้ด Error แล้วลอง เลื่อนลงไปด้านล่าง ถ้าข้อผิดพลาดนั้นไม่ได้มี ใน tutorialนี้ ลอง Search Google เพื่อแก้ดูครับ น่าจะไม่ยากเกินความสามารถครับ :) )
-
-![alt text]("/assets/images/5-finished.png"/>
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/assets/images/5-finished.png"
+     alt="Apache2"
+     style="width=400px" />
 
 #### 6. เข้าไปหน้า phpmyadmin
 
