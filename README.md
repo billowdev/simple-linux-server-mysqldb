@@ -1,5 +1,5 @@
-# testServerPHP
-testServerPHP - Operating System Subject - VMware Ubuntu Server - phpmyadmin - mysql
+# simple-linux-server-phpmysql
+#### Operating System Subject - VMware Ubuntu Server - phpmyadmin - mysql
 
 ### LEARNING SITE : https://www.w3schools.com/
 
