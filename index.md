@@ -344,3 +344,23 @@ SET GLOBAL validate_password_policy=MEDIUM;
 
 
 
+
+
+# Tesing 
+
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-1.png"
+     alt="Apache2"
+     style="width=400px" />
+
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-2.png"
+     alt="Apache2"
+     style="width=400px" />
+
+
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-3.png"
+     alt="Apache2"
+     style="width=400px" />
+
+<img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-4.png"
+     alt="Apache2"
+     style="width=400px" />
