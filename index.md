@@ -85,6 +85,10 @@ mysql
 #### Create USER for database
 <pre>
 CREATE USER 'testuser'@'%' IDENTIFIED BY 'root1234';
+GRANT ALL PRIVILEGES ON *. * TO 'testuser'@'%' WITH GRANT OPTION;
+SHOW GRANTS FOR testuser;
+FLUSH PRIVILEGES;
+
 </pre>
 
 #### Exit mysql
@@ -130,13 +134,13 @@ ln -s /usr/share/phpmyadmin /var/www/html
 mysql -p -u root
 </pre>
 
-#### CREATE DB
+#### CREATE your Database
 
 <pre>
 CREATE database mydatabase;
 </pre>
 
-#### USE DATABASE
+#### USE your DATABASE
 
 <pre>
 USE mydatabase;
