@@ -35,9 +35,9 @@ INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portde
 </pre>
 
 #### Preparing site
-#### Clone git in /var/www/html |  Move all file to /var/www/html | remove simple-linux-server-phpmysql Folder | 
+#### Clone git in /var/www/html |  Move all file to /var/www/html | remove simple-linux-server-mysqldb Folder | 
 <pre>
-git clone https://github.com/lacakp/simple-linux-server-phpmysql.git; mv -v ./simple-linux-server-phpmysql/* ./ ; rm -r simple-linux-server-phpmysql;
+git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; mv -v ./simple-linux-server-mysqldb/* ./ ; rm -r simple-linux-server-mysqldb;
 </pre>
 
 #### nano to config database
