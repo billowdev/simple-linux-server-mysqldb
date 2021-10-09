@@ -35,10 +35,9 @@ INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portde
 </pre>
 
 #### Preparing site
-
 #### Clone git in /var/www/html |  Move all file to /var/www/html | remove testServerPHP Folder | 
 <pre>
-git clone https://github.com/lacakp/testServerPHP.git; mv -v ./testServerPHP/* ./ ; rm -r testServerPHP;
+git clone https://github.com/lacakp/simple-linux-server-phpmysql.git; mv -v ./simple-linux-server-phpmysql/* ./ ; rm -r simple-linux-server-phpmysql;
 </pre>
 
 #### nano to config database
@@ -52,7 +51,7 @@ nano connectdb.php
 
 
 #### Fix phpmyadmin not found (วิธีแก้หา phpmyadmin ไม่เจอ)
-###### https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache
+##### https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache
 <pre>
 sudo ln -s /usr/share/phpmyadmin /var/www/html
 </pre>
@@ -85,7 +84,7 @@ mysql> SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE p
 mysql> install plugin validate_password SONAME 'validate_password.so';
 </pre>
 
-######check plugin is activated?
+###### check plugin is activated?
 <pre>
 mysql> SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
 </pre>
@@ -98,7 +97,7 @@ OR
 mysql> SET GLOBAL validate_password_policy=0;
 </pre>
 
-######confirm the password validation policy level.
+###### confirm the password validation policy level.
 <pre>
 SHOW VARIABLES LIKE 'validate_password%';
 </pre>
