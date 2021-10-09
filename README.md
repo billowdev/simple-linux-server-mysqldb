@@ -5,7 +5,7 @@
 
 ### Go to tutorial: 
 
-### https://lacakp.github.io/simple-linux-server-phpmysql/
+### https://lacakp.github.io/simple-linux-server-mysqldb/
 
 ### Repository-site
-### https://github.com/lacakp/simple-linux-server-phpmysql/tree/site
+### https://github.com/lacakp/simple-linux-server-mysqldb/tree/site
