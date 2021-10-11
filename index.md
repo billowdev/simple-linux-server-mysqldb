@@ -26,7 +26,7 @@ apt install apache2 -y
 
 ### install php
 <pre>
-apt install php php-cgi libapache2-mode-php php-common php-pear php-mbstring
+apt install php php-cgi libapache2-mod-php php-common php-pear php-mbstring
 
 a2enconf php7.4-cgi
 
@@ -346,7 +346,7 @@ SET GLOBAL validate_password_policy=MEDIUM;
 
 
 
-# Tesing 
+# Testing 
 
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-1.png"
      alt="Apache2"
