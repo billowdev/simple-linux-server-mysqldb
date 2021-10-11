@@ -31,6 +31,8 @@ apt install php php-cgi libapache2-mod-php php-common php-pear php-mbstring
 a2enconf php7.4-cgi
 
 systemctl reload apache2.service
+
+systemctl restart apache2
 </pre>
 
 <pre>
