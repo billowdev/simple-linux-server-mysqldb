@@ -1,6 +1,13 @@
 # simple-linux-server-mysqldb
 #### Operating System Subject - VMware Ubuntu Server - phpmyadmin - mysql
 
+## ลง Ubuntu ใน VMware
+- https://youtu.be/P9_TxAYZ20E
+- 
+## ทดลองเซิร์ฟเวอร์ กับระบบล็อคอิน  phpmyadmin - mysql ใน ubunt userver
+- https://youtu.be/OFN-RVQfcuQ
+
+
 ### LEARNING SITE : https://www.w3schools.com/
 
 ### Go to tutorial: 
@@ -9,3 +16,5 @@
 
 ### Repository-site
 ### https://github.com/lacakp/simple-linux-server-mysqldb/tree/site
+
+
