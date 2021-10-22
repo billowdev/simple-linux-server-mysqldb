@@ -1,160 +1,254 @@
 <html lang="en-US">
-  <head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/simple-linux-server-mysqldb/assets/css/style.css?v=74ce1365ff8f245b80d82cdb340eec71fef25441">
-    <link rel="stylesheet" type="text/css" href="/simple-linux-server-mysqldb/assets/css/print.css" media="print">
-    <!--[if lt IE 9]>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet"
+    href="/simple-linux-server-mysqldb/assets/css/style.css?v=74ce1365ff8f245b80d82cdb340eec71fef25441">
+  <link rel="stylesheet" type="text/css" href="/simple-linux-server-mysqldb/assets/css/print.css" media="print">
+  <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Basic login Centos8</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Linux Server simple login system with mysql" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Linux Server - phpmyadmin - mysql - simple php login" />
-<meta property="og:description" content="Linux Server - phpmyadmin - mysql - simple php login" />
-<link rel="canonical" href="https://lacakp.github.io/simple-linux-server-mysqldb/" />
-<meta property="og:url" content="https://lacakp.github.io/simple-linux-server-mysqldb/" />
-<meta property="og:site_name" content="simple-linux-server-mysqldb" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Linux Server simple login system with mysql" />
-<script type="application/ld+json">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Basic login Centos8</title>
+  <meta name="generator" content="Jekyll v3.9.0" />
+  <meta property="og:title" content="Linux Server simple login system with mysql" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Linux Server - phpmyadmin - mysql - simple php login" />
+  <meta property="og:description" content="Linux Server - phpmyadmin - mysql - simple php login" />
+  <link rel="canonical" href="https://lacakp.github.io/simple-linux-server-mysqldb/" />
+  <meta property="og:url" content="https://lacakp.github.io/simple-linux-server-mysqldb/" />
+  <meta property="og:site_name" content="simple-linux-server-mysqldb" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Linux Server simple login system with mysql" />
+  <script type="application/ld+json">
 {"description":"Linux Server - phpmyadmin - mysql - simple php login","url":"https://lacakp.github.io/simple-linux-server-mysqldb/","@type":"WebSite","headline":"Linux Server simple login system with mysql","name":"simple-linux-server-mysqldb","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <!-- End Jekyll SEO tag -->
 
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
-<!-- Setup Google Analytics -->
+  <!-- Setup Google Analytics -->
 
 
 
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/simple-linux-server-mysqldb/favicon.ico" -->
+  <!-- You can set your favicon here -->
+  <!-- link rel="shortcut icon" type="image/x-icon" href="/simple-linux-server-mysqldb/favicon.ico" -->
 
-<!-- end custom head snippets -->
+  <!-- end custom head snippets -->
 
-  </head>
+</head>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<body>
+  <div id="container">
+    <div class="inner">
 
-        <header>
-          <h1>CentOS8</h1>
-          <h2>Linux Server simple login system with mysql</h2>
-        </header>
-        <section id="downloads" class="clearfix">
-          
-	
-        </section>
-        <hr>
-        <section id="main_content">
-          <h1 id="linux-server-simple-login-system-with-mysql">Linux Server simple login system with mysql</h1>
-<h2 id="operating-system-subject">Operating System Subject</h2>
-<h6 id="vmware-ubuntu-server---phpmyadmin---mysql">VMware Ubuntu Server - phpmyadmin - mysql</h6>
+      <header>
+        <h1>CentOS8</h1>
+        <h2>Linux Server simple login system with mysql</h2>
+      </header>
+      <section id="downloads" class="clearfix">
 
-<h2 id="learning-site--w3schools"><a href="https://www.w3schools.com/">LEARNING SITE : w3schools</a></h2>
 
-<hr />
+      </section>
+      <hr>
+      <section id="main_content">
+        <h1 id="linux-server-simple-login-system-with-mysql">Linux Server simple login system with mysql</h1>
+        <h2 id="operating-system-subject">Operating System Subject</h2>
+        <h6 id="vmware-ubuntu-server---phpmyadmin---mysql">VMware Ubuntu Server - phpmyadmin - mysql</h6>
 
-<h2 id="change-to-root">change to root</h2>
-<pre>
+        <h2 id="learning-site--w3schools"><a href="https://www.w3schools.com/">LEARNING SITE : w3schools</a></h2>
+
+        <hr />
+
+        <h2 id="change-to-root">change to root</h2>
+        <pre>
 su
 </pre>
 
-<h3 id="update">update</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum update -y
-</code></pre></div></div>
+        <h3 id="update">update</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>yum update -y
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="install-apache-package">install apache package</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf install httpd
-</code></pre></div></div>
+        <h3 id="install-apache-package">install apache package</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>dnf install httpd
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="open-up-port-80">open up port 80</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd --permanent --add-service=http
-</code></pre></div></div>
+        <h3 id="open-up-port-80">open up port 80</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>firewall-cmd --permanent --add-service=http
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd --permanent --add-service=https
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>firewall-cmd --permanent --add-service=https
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd --reload
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>firewall-cmd --reload
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="check-server">Check server</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start httpd
-</code></pre></div></div>
+        <h3 id="check-server">Check server</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl start httpd
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl status httpd
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl status httpd
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="check-hostname">Check hostname</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hostname -I
-</code></pre></div></div>
+        <h4 id="check-hostname">Check hostname</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>hostname -I
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="installing-mysql">Installing MySQL</h3>
+        <h3 id="installing-mysql">Installing MySQL</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf install mysql-server
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>dnf install mysql-server
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start mysqld.service
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl start mysqld.service
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl status mysqld
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl status mysqld
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="set-ใช้งาน-mysql-เมื่อรัน-server">set ใช้งาน mysql เมื่อรัน server</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable mysqld
-</code></pre></div></div>
+        <h4 id="set-ใช้งาน-mysql-เมื่อรัน-server">set ใช้งาน mysql เมื่อรัน server</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl enable mysqld
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="install-security-mysql">install security mysql</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql_secure_installation
-</code></pre></div></div>
-<h4 id="test-sql">test sql</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysqladmin -u root -p version
-</code></pre></div></div>
+        <h3 id="install-security-mysql">install security mysql</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mysql_secure_installation
+</code></pre>
+          </div>
+        </div>
+        <h4 id="test-sql">test sql</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mysqladmin -u root -p version
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mysql -u root -p
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="install-php-1">install php</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf -y install php php-common php-process php-xmlrpc php-xml php-soap php-snmp php-recode php-bcmath php-cli php-dba php-dbg php-mbstring php-odbc php-pecl-apcu-devel php-pecl-zip php-pgsql php-pecl-apcu php-pear php-pdo php-opcache php-devel php-embedded php-enchant php-gd php-fpm php-gmp php-intl php-ldap php-json php-mysqlnd php-pdo php-gd php-mbstring zip unzip tar wget
-</code></pre></div></div>
+        <h3 id="install-php-1">install php</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>dnf -y install php php-common php-process php-xmlrpc php-xml php-soap php-snmp php-recode php-bcmath php-cli php-dba php-dbg php-mbstring php-odbc php-pecl-apcu-devel php-pecl-zip php-pgsql php-pecl-apcu php-pear php-pdo php-opcache php-devel php-embedded php-enchant php-gd php-fpm php-gmp php-intl php-ldap php-json php-mysqlnd php-pdo php-gd php-mbstring zip unzip tar wget
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="install-phpmyadmin-1">install phpmyadmin</h3>
-<h5 id="phpmyadmin"><a href="https://www.phpmyadmin.net/">phpmyadmin</a></h5>
+        <h3 id="install-phpmyadmin-1">install phpmyadmin</h3>
+        <h5 id="phpmyadmin"><a href="https://www.phpmyadmin.net/">phpmyadmin</a></h5>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/html
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>cd /var/www/html
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-languages.zip
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="unzip">unzip</h4>
+        <h4 id="unzip">unzip</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip phpMyAdmin-4.9.4-all-languages.zip
-</code></pre></div></div>
-<h3 id="rename">rename</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv phpMyAdmin-4.9.4-all-languages phpmyadmin
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>unzip phpMyAdmin-4.9.4-all-languages.zip
+</code></pre>
+          </div>
+        </div>
+        <h3 id="rename">rename</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mv phpMyAdmin-4.9.4-all-languages phpmyadmin
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="change-ownership">change ownership</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chown -R apache:apache /var/www/html/phpmyadmin
-</code></pre></div></div>
+        <h3 id="change-ownership">change ownership</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>chown -R apache:apache /var/www/html/phpmyadmin
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="rename-config-file">rename config file</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd phpmyadmin
+        <h4 id="rename-config-file">rename config file</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>cd phpmyadmin
 mv config.sample.inc.php config.inc.php
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano config.inc.php
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>nano config.inc.php
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="php-root-password">php root password</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$cfg['blowfish_secret']='thisispassword';
-</code></pre></div></div>
+        <h4 id="php-root-password">php root password</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>$cfg['blowfish_secret']='thisispassword';
+</code></pre>
+          </div>
+        </div>
 
-<!-- ##### perrmissions temporary phpMyAdmin
+        <!-- ##### perrmissions temporary phpMyAdmin
 <pre>
 
 mkdir /usr/share/phpmyadmin/tmp
@@ -165,17 +259,28 @@ chmod 777 /usr/share/phpmyadmin/tmp
 
 </pre> -->
 
-<h3 id="import-the-tables-for-phpmyadmin">import the tables for phpMyAdmin</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql &lt; sql/create_tables.sql
-</code></pre></div></div>
+        <h3 id="import-the-tables-for-phpmyadmin">import the tables for phpMyAdmin</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mysql &lt; sql/create_tables.sql
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="configure-apache-for-phpmyadmin">Configure Apache for phpMyAdmin</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/httpd/conf.d/phpmyadmin.conf
-</code></pre></div></div>
+        <h3 id="configure-apache-for-phpmyadmin">Configure Apache for phpMyAdmin</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>nano /etc/httpd/conf.d/phpmyadmin.conf
+</code></pre>
+          </div>
+        </div>
 
-<h5 id="หลังจากสร้างไฟล์แล้วให้นำไฟล์โค้ดด้านล่างไปใส่ใน-conf-ไฟล์">หลังจากสร้างไฟล์แล้วให้นำไฟล์โค้ดด้านล่างไปใส่ใน conf ไฟล์</h5>
+        <h5 id="หลังจากสร้างไฟล์แล้วให้นำไฟล์โค้ดด้านล่างไปใส่ใน-conf-ไฟล์">
+          หลังจากสร้างไฟล์แล้วให้นำไฟล์โค้ดด้านล่างไปใส่ใน conf ไฟล์</h5>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alias /phpmyadmin /var/www/html/phpmyadmin
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Alias /phpmyadmin /var/www/html/phpmyadmin
 
 &lt;Directory /var/www/html/phpmyadmin/&gt;
    AddDefaultCharset UTF-8
@@ -214,24 +319,32 @@ chmod 777 /usr/share/phpmyadmin/tmp
 
 &lt;/Directory&gt;
 
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="restart-httod">restart httod</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart httpd
-</code></pre></div></div>
+        <h4 id="restart-httod">restart httod</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl restart httpd
+</code></pre>
+          </div>
+        </div>
 
-<h5 id="user-mysql">user mysql</h5>
-<pre>
+        <h5 id="user-mysql">user mysql</h5>
+        <pre>
   mysql or mysql –u root –p
 </pre>
 
-<pre>
+        <pre>
 ALTER USER 'root'@'%' IDENTIFIED WITH myswl_native_password BY 'thispass';
 </pre>
 
-<h3 id="-หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์-phpmyadmin">( หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์ phpmyadmin)</h3>
+        <h3 id="-หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์-phpmyadmin">( หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์ phpmyadmin)</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/httpd/conf.d/phpmyadmin.conf
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>nano /etc/httpd/conf.d/phpmyadmin.conf
 
 แล้วก็หาบรรทัด
 Alias /phpmyadmin /var/www/html/phpmyadmin
@@ -240,14 +353,20 @@ Alias /phpmyadmin /var/www/html/phpmyadmin
 /securelocation คือ ตำแหน่งที่ต้องการเปลี่ยน
 
 Alias /newlocation /var/www/html/phpmyadmin
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h5 id="หลังจากนนั้นทำการ">หลังจากนนั้นทำการ</h5>
+        <h5 id="หลังจากนนั้นทำการ">หลังจากนนั้นทำการ</h5>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart httpd
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>systemctl restart httpd
+</code></pre>
+          </div>
+        </div>
 
-<!--
+        <!--
 ### protocol for phpMyAdmin
 ```
 yum –y install policycoreutils-python-utils
@@ -266,7 +385,7 @@ semanage fcontext –a –t httpd_sys_rw_content_t "usr/share/phpmyadmin/tmp(/.*
 restorecon -Rv '/usr/share/phpmyadmin/'
 ``` -->
 
-<!-- #### Allow Traffic
+        <!-- #### Allow Traffic
 ```
 firewall–cmd ––permanent ––add-service=http
 ```
@@ -275,84 +394,137 @@ firewall–cmd ––permanent ––add-service=http
 firewall-cmd ––reload
 ``` -->
 
-<h3 id="fix-phpmyadmin-user-cant-login--แก้-ไม่สามารถเข้า-phpmyadmin-ได้">FIX phpmyadmin USER can’t login ( แก้ ไม่สามารถเข้า phpmyadmin ได้)</h3>
+        <h3 id="fix-phpmyadmin-user-cant-login--แก้-ไม่สามารถเข้า-phpmyadmin-ได้">FIX phpmyadmin USER can’t login ( แก้
+          ไม่สามารถเข้า phpmyadmin ได้)</h3>
 
-<h6 id="mysql">mysql</h6>
+        <h6 id="mysql">mysql</h6>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -p -u root
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mysql -p -u root
+</code></pre>
+          </div>
+        </div>
 
-<h6 id="2-create-user-and-assign-password">2 Create USER And assign password</h6>
+        <h6 id="2-create-user-and-assign-password">2 Create USER And assign password</h6>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE USER 'youruser'@'%' IDENTIFIED BY 'thispass';
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>CREATE USER 'youruser'@'%' IDENTIFIED BY 'thispass';
+</code></pre>
+          </div>
+        </div>
 
-<h6 id="3-add-root-to-youruser">3 Add root to youruser</h6>
+        <h6 id="3-add-root-to-youruser">3 Add root to youruser</h6>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
+</code></pre>
+          </div>
+        </div>
 
-<hr />
+        <hr />
 
-<h3 id="fix--error-1819-hy000-แก้-error-policy-password-เราจะเปลี่ยนให้มัน-low">Fix  ERROR 1819 (HY000) (แก้ Error policy password เราจะเปลี่ยนให้มัน low)</h3>
+        <h3 id="fix--error-1819-hy000-แก้-error-policy-password-เราจะเปลี่ยนให้มัน-low">Fix ERROR 1819 (HY000) (แก้
+          Error policy password เราจะเปลี่ยนให้มัน low)</h3>
 
-<h4 id="enable-the-validate_password-plugin">enable the validate_password plugin</h4>
+        <h4 id="enable-the-validate_password-plugin">enable the validate_password plugin</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
 install plugin validate_password SONAME 'validate_password.so';
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="check-plugin-is-activated">check plugin is activated?</h4>
+        <h4 id="check-plugin-is-activated">check plugin is activated?</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="set-a-lower-password-validation-policy">set a lower password validation policy</h4>
+        <h4 id="set-a-lower-password-validation-policy">set a lower password validation policy</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET GLOBAL validate_password_policy=LOW;
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>SET GLOBAL validate_password_policy=LOW;
 SET GLOBAL validate_password.policy=LOW;
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="confirm-the-password-validation-policy-level">confirm the password validation policy level.</h4>
+        <h4 id="confirm-the-password-validation-policy-level">confirm the password validation policy level.</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SHOW VARIABLES LIKE 'validate_password%';
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>SHOW VARIABLES LIKE 'validate_password%';
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="create-user">Create User</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create user ‘myuser’@’%’ IDENTIFIED BY ‘root1234’;
+        <h4 id="create-user">Create User</h4>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>create user ‘myuser’@’%’ IDENTIFIED BY ‘root1234’;
 GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' WITH GRANT OPTION;
 SHOW GRANTS FOR myuser;
 FLUSH PRIVILEGES;
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="revert-to-the-medium-password-policy-ในกรณีอยากกลับคืนค่าของ-policy-กลับปเป็น-medium-หรือ-strong">revert to the ‘MEDIUM’ password policy (ในกรณีอยากกลับคืนค่าของ policy กลับปเป็น MEDIUM หรือ Strong)</h3>
+        <h3 id="revert-to-the-medium-password-policy-ในกรณีอยากกลับคืนค่าของ-policy-กลับปเป็น-medium-หรือ-strong">revert
+          to the ‘MEDIUM’ password policy (ในกรณีอยากกลับคืนค่าของ policy กลับปเป็น MEDIUM หรือ Strong)</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET GLOBAL validate_password_policy=MEDIUM;
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>SET GLOBAL validate_password_policy=MEDIUM;
+</code></pre>
+          </div>
+        </div>
 
 
-<h2 id="Basic Login">Basic Login</h2>
+        <h2 id="Basic Login">Basic Login</h2>
 
-<h3 id="ทำการสร้าง-database">ทำการสร้าง database</h3>
+        <h3 id="ทำการสร้าง-database">ทำการสร้าง database</h3>
 
-<h4 id="use-mysql">use mysql</h4>
+        <h4 id="use-mysql">use mysql</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -p -u root
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>mysql -p -u root
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="create-your-database">CREATE your Database</h4>
+        <h4 id="create-your-database">CREATE your Database</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE database mydatabase;
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>CREATE database mydatabase;
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="use-your-database">USE your DATABASE</h4>
+        <h4 id="use-your-database">USE your DATABASE</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>USE mydatabase;
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>USE mydatabase;
+</code></pre>
+          </div>
+        </div>
 
-<h3 id="create-table">CREATE TABLE</h3>
+        <h3 id="create-table">CREATE TABLE</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE `member` (
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>CREATE TABLE `member` (
   `UserID` int(3) unsigned zerofill NOT NULL auto_increment,
   `Username` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
@@ -361,109 +533,128 @@ FLUSH PRIVILEGES;
   PRIMARY KEY  (`UserID`),
   UNIQUE KEY `Username` (`Username`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=3;
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="insert-user-and-admin-data">INSERT USER AND ADMIN DATA</h4>
+        <h4 id="insert-user-and-admin-data">INSERT USER AND ADMIN DATA</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO `member` VALUES (004, 'root', 'root', 'Mr Root Ubuntu', 'ADMIN');
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>INSERT INTO `member` VALUES (004, 'root', 'root', 'Mr Root Ubuntu', 'ADMIN');
 INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portdee', 'USER');
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="exit-mysql-1">Exit mysql</h4>
+        <h4 id="exit-mysql-1">Exit mysql</h4>
 
-<pre>
+        <pre>
 exit
 </pre>
 
-<hr />
+        <hr />
 
-<h3 id="preparing-site-change-directory-to-varwwwhtml">Preparing site change directory to /var/www/html</h3>
-<h6 id="เปลี่ยนโฟล์เดอร์ไปที่-path-varwwwhtml">เปลี่ยนโฟล์เดอร์ไปที่ path /var/www/html</h6>
+        <h3 id="preparing-site-change-directory-to-varwwwhtml">Preparing site change directory to /var/www/html</h3>
+        <h6 id="เปลี่ยนโฟล์เดอร์ไปที่-path-varwwwhtml">เปลี่ยนโฟล์เดอร์ไปที่ path /var/www/html</h6>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/html
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>cd /var/www/html
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="check-git-เพื่อความชัวร์ทำการเช็คว่า-linux-ท่านใช้-gitได้ไหม">check git เพื่อความชัวร์ทำการเช็คว่า linux ท่านใช้ gitได้ไหม</h4>
+        <h4 id="check-git-เพื่อความชัวร์ทำการเช็คว่า-linux-ท่านใช้-gitได้ไหม">check git เพื่อความชัวร์ทำการเช็คว่า linux
+          ท่านใช้ gitได้ไหม</h4>
 
-<pre>
+        <pre>
 git (if git not install ) then
 apt install git
 </pre>
 
-<h4 id="clone-git-in-varwwwhtml---move-all-file-to-varwwwhtml--remove-simple-linux-server-mysqldb-folder-">Clone git in /var/www/html |  Move all file to /var/www/html | remove simple-linux-server-mysqldb Folder |</h4>
+        <h4 id="clone-git-in-varwwwhtml---move-all-file-to-varwwwhtml--remove-simple-linux-server-mysqldb-folder-">Clone
+          git in /var/www/html | Move all file to /var/www/html | remove simple-linux-server-mysqldb Folder |</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; 
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; 
   mv -f ./simple-linux-server-mysqldb/* ./ ; 
   rm -f -r simple-linux-server-mysqldb;
-</code></pre></div></div>
+</code></pre>
+          </div>
+        </div>
 
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/clone.png" alt="Clone" style="width=400px" /></p>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/clone.png"
+            alt="Clone" style="width=400px" /></p>
 
-<h4 id="check-file-ทำการเช็คไฟล์ในโฟลเดอร์-">Check file (ทำการเช็คไฟล์ในโฟลเดอร์ )</h4>
+        <h4 id="check-file-ทำการเช็คไฟล์ในโฟลเดอร์-">Check file (ทำการเช็คไฟล์ในโฟลเดอร์ )</h4>
 
-<pre>
+        <pre>
 ls -al
 </pre>
 
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/ls-al.png" alt="ls-al" style="width=400px" /></p>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/ls-al.png"
+            alt="ls-al" style="width=400px" /></p>
 
-<h4 id="nano-to-config-database--เข้าไปแก้ไข-เปลี่ยน-ip-user-password-database">nano to config database ( เข้าไปแก้ไข เปลี่ยน ip-user-password-database)</h4>
-<h4 id="ใน-tutorial-นี้ได้ตั้งไว้คือ-localhost3306-myuser-root1234-mydatabase-mysql-default-port-is-3306">ใน tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabase) MySQL default port is 3306</h4>
+        <h4 id="nano-to-config-database--เข้าไปแก้ไข-เปลี่ยน-ip-user-password-database">nano to config database (
+          เข้าไปแก้ไข เปลี่ยน ip-user-password-database)</h4>
+        <h4 id="ใน-tutorial-นี้ได้ตั้งไว้คือ-localhost3306-myuser-root1234-mydatabase-mysql-default-port-is-3306">ใน
+          tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabase) MySQL default port is 3306</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano connectdb.php
-</code></pre></div></div>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>nano connectdb.php
+</code></pre>
+          </div>
+        </div>
 
-<h4 id="ใน centos อาจจะลองใช้เป็น">ใน centos อาจจะใช้ localhost</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><!-- connectdb.php -->
+        <h4 id="ใน centos อาจจะลองใช้เป็น">ใน centos อาจจะใช้ localhost</h4>
 
-  <?php
-  $dbServerName = "localhost"; // ip address (hostname -I)
-  $dbUsername = "myuser"; // username
-  $dbPassword = "root1234"; // db pass
-  $dbName = "mydatabase"; // your database to connect
-  
-  $con= mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName) or die("Error ! : " . mysqli_error($con));
-  mysqli_query($con, "SET NAMES 'utf8' ");
-  error_reporting( error_reporting() & ~E_NOTICE );
-  date_default_timezone_set('Asia/Bangkok');
-  ?>
-</code></pre></div></div>
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/nanoconnectdb.png" alt="login-page" style="width=400px" /></p>
 
-<h4 id="วิธี-save">วิธี save</h4>
-<pre>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/nanoconnectdb.png"
+            alt="login-page" style="width=400px" /></p>
+
+        <h4 id="วิธี-save">วิธี save</h4>
+        <pre>
 1. CTRL + x
 2. y
 3. Enter
 </pre>
 
-<h3 id="เข้าไปใน-192168xxxxxloginphp">เข้าไปใน 192.168.xx.xxx/login.php</h3>
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/loginphp.png" alt="login-page" style="width=400px" /></p>
+        <h3 id="เข้าไปใน-192168xxxxxloginphp">เข้าไปใน 192.168.xx.xxx/login.php</h3>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/loginphp.png"
+            alt="login-page" style="width=400px" /></p>
 
-<hr />
+        <hr />
 
 
 
-<h1 id="preview">preview</h1>
+        <h1 id="preview">preview</h1>
 
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-1.png" alt="Apache2" style="width=400px" /></p>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-1.png"
+            alt="Apache2" style="width=400px" /></p>
 
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-2.png" alt="Apache2" style="width=400px" /></p>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-2.png"
+            alt="Apache2" style="width=400px" /></p>
 
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-3.png" alt="Apache2" style="width=400px" /></p>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-3.png"
+            alt="Apache2" style="width=400px" /></p>
 
-<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-4.png" alt="Apache2" style="width=400px" /></p>
+        <p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-4.png"
+            alt="Apache2" style="width=400px" /></p>
 
-        </section>
+      </section>
 
-        <footer>
-        
-          simple-linux-server-mysqldb is maintained by <a href="https://github.com/lacakp">lacakp</a><br>
-        
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
-        </footer>
+      <footer>
 
-      </div>
+        simple-linux-server-mysqldb is maintained by <a href="https://github.com/lacakp">lacakp</a><br>
+
+        This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
+      </footer>
+
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
