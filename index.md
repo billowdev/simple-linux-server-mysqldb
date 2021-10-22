@@ -20,9 +20,9 @@ apt upgrade -y
 ##### [More Detail - How To Install the Apache Web Server on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04)
 
 ### install apache2 (ทำการติดตั้ง apache2)
-<pre>
+```
 apt install apache2 -y
-</pre>
+```
 
 ### install php
 <pre>
@@ -35,17 +35,17 @@ systemctl reload apache2.service
 systemctl restart apache2
 </pre>
 
-<pre>
+```
 ufw allow 'Apache'
-</pre>
+```
 #### make sure the service is running
-<pre>
+```
 systemctl status apache2
-</pre>
+```
 #### Check IP addresses
-<pre>
+```
 hostname -I
-</pre>
+```
 
 #### ลองพิมพ์ ip ที่ได้จากคำสั่ง hostname -I ใน url ของ browser
 <pre>
@@ -54,19 +54,19 @@ hostname -I
 ##### ถ้าปรากฎหน้า apache แสดงว่าใช้งานได้ครับ
 
 ### install mysql (ทำการติดตั้ง mysql)
-<pre>
+```
 apt install mysql-server -y
-</pre>
+```
 
 #### check mysql server is running
-<pre>
+```
 systemctl status mysql
-</pre>
+```
 
 #### security-related operations.
-<pre>
+```
 mysql_secure_installation
-</pre>
+```
 
 #### 1. yes : y
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/1-mysql-secure.png"
@@ -101,9 +101,9 @@ mysql_secure_installation
 
 
 ### install phpmyadmin
-<pre>
+```
 apt install phpmyadmin -y
-</pre>
+```
 
 #### 1. Select Apache2
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/1-apache2.png"
@@ -162,34 +162,34 @@ pass: yourpassword
 ### Fix phpmyadmin not found (วิธีแก้หากหา phpmyadmin ไม่เจอ)
 #####  [ref : how-to-solve-the-phpmyadmin](https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache)
 
-<pre>
+```
 ln -s /usr/share/phpmyadmin /var/www/html
-</pre>
+```
 -----------------------------------------------------------
 
 ### ทำการสร้าง database
 
 #### use mysql
 
-<pre>
+```
 mysql -p -u root
-</pre>
+```
 
 #### CREATE your Database
 
-<pre>
+```
 CREATE database mydatabase;
-</pre>
+```
 
 #### USE your DATABASE
 
-<pre>
+```
 USE mydatabase;
-</pre>
+```
 
 ### CREATE TABLE
 
-<pre>
+```
 CREATE TABLE `member` (
   `UserID` int(3) unsigned zerofill NOT NULL auto_increment,
   `Username` varchar(100) NOT NULL,
@@ -199,14 +199,14 @@ CREATE TABLE `member` (
   PRIMARY KEY  (`UserID`),
   UNIQUE KEY `Username` (`Username`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=3;
-</pre>
+```
 
 #### INSERT USER AND ADMIN DATA
 
-<pre>
+```
 INSERT INTO `member` VALUES (004, 'root', 'root', 'Mr Root Ubuntu', 'ADMIN');
 INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portdee', 'USER');
-</pre>
+```
 
 #### Exit mysql
 
@@ -219,9 +219,9 @@ exit
 ### Preparing site change directory to /var/www/html
 ###### เปลี่ยนโฟล์เดอร์ไปที่ path /var/www/html
 
-<pre>
+```
 cd /var/www/html
-</pre>
+```
 
 #### check git เพื่อความชัวร์ทำการเช็คว่า linux ท่านใช้ gitได้ไหม 
 
@@ -232,9 +232,9 @@ apt install git
 
 #### Clone git in /var/www/html |  Move all file to /var/www/html | remove simple-linux-server-mysqldb Folder | 
 
-<pre>
+```
 git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; mv -v ./simple-linux-server-mysqldb/* ./ ; rm -r simple-linux-server-mysqldb;
-</pre>
+```
 
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/clone.png"
      alt="Clone"
@@ -253,9 +253,9 @@ ls -al
 #### nano to config database ( เข้าไปแก้ไข เปลี่ยน ip-user-password-database)
 #### ใน tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabase) MySQL default port is 3306
 
-<pre>
+```
 nano connectdb.php
-</pre>
+```
 
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/nanoconnectdb.png"
      alt="login-page"
@@ -283,21 +283,21 @@ nano connectdb.php
 
 ###### mysql
 
-<pre>
+```
 mysql -p -u root
-</pre>
+```
 
 ###### 2 Create USER And assign password
 
-<pre>
+```
 CREATE USER 'youruser'@'%' IDENTIFIED BY 'thispass';
-</pre>
+```
 
 ###### 3 Add root to youruser
 
-<pre>
+```
 GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
-</pre>
+```
 
 -----------------------------------------------------------
 
@@ -305,50 +305,297 @@ GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT OPTION;
 
 #### enable the validate_password plugin
 
-<pre>
+```
 SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
 install plugin validate_password SONAME 'validate_password.so';
-</pre>
+```
 
 #### check plugin is activated?
 
-<pre>
+```
 SELECT plugin_name, plugin_status FROM information_schema.plugins WHERE plugin_name LIKE 'validate%';
-</pre>
+```
 
 
 #### set a lower password validation policy
 
-<pre>
+```
 SET GLOBAL validate_password_policy=LOW;
 SET GLOBAL validate_password.policy=LOW;
-</pre>
+```
 
 #### confirm the password validation policy level.
 
-<pre>
+```
 SHOW VARIABLES LIKE 'validate_password%';
-</pre>
+```
 
 #### Create User
-<pre>
+```
 create user ‘myuser’@’%’ IDENTIFIED BY ‘root1234’;
 GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' WITH GRANT OPTION;
 SHOW GRANTS FOR myuser;
 FLUSH PRIVILEGES;
-</pre>
+```
 
 ### revert to the ‘MEDIUM’ password policy (ในกรณีอยากกลับคืนค่าของ policy กลับปเป็น MEDIUM หรือ Strong)
 
-<pre>
+```
 SET GLOBAL validate_password_policy=MEDIUM;
+```
+
+
+
+# CentOS 8
+
+#### change to root
+<pre>
+su
 </pre>
 
+#### update
+```
+yum update -y
+```
+
+### install apache package
+```
+dnf install httpd
+```
+
+### open up port 80 
+```
+firewall-cmd --permanent --add-service=http
+```
+
+```
+firewall-cmd --permanent --add-service=https
+```
+
+```
+firewall-cmd --reload
+```
+
+### Check server
+```
+systemctl start httpd
+```
+
+```
+systemctl status httpd
+```
+
+#### Check hostname
+```
+hostname -I
+```
+
+### Installing MySQL
+
+```
+dnf install mysql-server
+```
+
+```
+systemctl start mysqld.service
+```
+
+```
+systemctl status mysqld
+```
+
+#### set ใช้งาน mysql เมื่อรัน server
+```
+systemctl enable mysqld
+```
+
+### install security mysql
+```
+mysql_secure_installation
+```
+#### test sql
+```
+mysqladmin -u root -p version
+```
+
+```
+mysql -u root -p
+```
+
+### install php
+```
+dnf -y install php php-common php-process php-xmlrpc php-xml php-soap php-snmp php-recode php-bcmath php-cli php-dba php-dbg php-mbstring php-odbc php-pecl-apcu-devel php-pecl-zip php-pgsql php-pecl-apcu php-pear php-pdo php-opcache php-devel php-embedded php-enchant php-gd php-fpm php-gmp php-intl php-ldap php-json php-mysqlnd php-pdo php-gd php-mbstring zip unzip tar wget
+```
+
+### install phpmyadmin
+##### [phpmyadmin](https://www.phpmyadmin.net/)
+
+```
+cd /var/www/html
+wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-languages.zip
+```
+
+#### unzip
+
+```
+unzip phpMyAdmin-4.9.4-all-languages.zip
+```
+### rename 
+```
+mv phpMyAdmin-4.9.4-all-languages phpmyadmin
+```
+
+### change ownership
+```
+chown -R apache:apache /var/www/html/phpmyadmin
+```
+
+#### rename config file
+```
+cd phpmyadmin
+mv config.sample.inc.php config.inc.php
+```
+
+```
+nano config.inc.php
+```
+
+#### php root password
+```
+$cfg['blowfish_secret']='thisispassword';
+```
+
+<!-- ##### perrmissions temporary phpMyAdmin
+<pre>
+
+mkdir /usr/share/phpmyadmin/tmp
+
+chown -R apache:apache /usr/share/phpmyadmin
+
+chmod 777 /usr/share/phpmyadmin/tmp
+
+</pre> -->
+
+###  import the tables for phpMyAdmin
+```
+mysql < sql/create_tables.sql
+```
+
+### Configure Apache for phpMyAdmin
+```
+nano /etc/httpd/conf.d/phpmyadmin.conf
+```
+
+##### หลังจากสร้างไฟล์แล้วให้นำไฟล์โค้ดด้านล่างไปใส่ใน conf ไฟล์
+
+```
+Alias /phpmyadmin /var/www/html/phpmyadmin
+
+<Directory /var/www/html/phpmyadmin/>
+   AddDefaultCharset UTF-8
+
+   <IfModule mod_authz_core.c>
+     # Apache 2.4
+     <RequireAny>
+      Require all granted
+     </RequireAny>
+   </IfModule>
+   <IfModule !mod_authz_core.c>
+     # Apache 2.2
+     Order Deny,Allow
+     Deny from All
+     Allow from 127.0.0.1
+     Allow from ::1
+   </IfModule>
+</Directory>
+
+<Directory /var/www/html/phpmyadmin/setup/>
+   <IfModule mod_authz_core.c>
+     # Apache 2.4
+     <RequireAny>
+       Require all granted
+     </RequireAny>
+
+   </IfModule>
+
+   <IfModule !mod_authz_core.c>
+     # Apache 2.2
+     Order Deny,Allow
+     Deny from All
+     Allow from 127.0.0.1
+     Allow from ::1
+   </IfModule>
+
+</Directory>
+
+```
+
+#### restart httod
+```
+systemctl restart httpd
+```
+
+
+###### user mysql
+<pre>
+mysql –u root –p
+</pre>
+
+<pre>
+ALTER USER 'root'@'%' IDENTIFIED WITH myswl_native_password BY 'thisispassword';
+</pre>
+
+### ( หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์ phpmyadmin)
+
+```
+nano /etc/httpd/conf.d/phpmyadmin.conf
+
+แล้วก็หาบรรทัด
+Alias /phpmyadmin /var/www/html/phpmyadmin
+
+เปลี่ยนใหม่เป็น
+/securelocation คือ ตำแหน่งที่ต้องการเปลี่ยน
+
+Alias /newlocation /var/www/html/phpmyadmin
+```
+
+##### หลังจากนนั้นทำการ 
+
+```
+systemctl restart httpd
+```
+
+<!--
+### protocol for phpMyAdmin
+```
+yum –y install policycoreutils-python-utils
+```
+
+ #### เปิดใช้งานการเข้าถึงไดเร็กทอรี phpmyadmin
+```
+emanage fcontext –a –t httpd_sys_rw_content_t '/usr/share/phpmyadmin/'
+```
+
+```
+semanage fcontext –a –t httpd_sys_rw_content_t "usr/share/phpmyadmin/tmp(/.*)?"
+```
+
+```
+restorecon -Rv '/usr/share/phpmyadmin/'
+``` -->
+
+<!-- #### Allow Traffic
+```
+firewall–cmd ––permanent ––add-service=http
+```
+
+```
+firewall-cmd ––reload
+``` -->
 
 
 
-
-# Testing 
+# preview 
 
 <img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/result-1.png"
      alt="Apache2"
