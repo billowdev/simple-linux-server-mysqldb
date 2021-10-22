@@ -7,8 +7,11 @@
 ### LEARNING SITE : https://www.w3schools.com/
 
 ### Go to tutorial: 
+#### Ubuntu
+#### https://lacakp.github.io/simple-linux-server-mysqldb/
 
-### https://lacakp.github.io/simple-linux-server-mysqldb/
+#### Centos8
+#### https://lacakp.github.io/simple-linux-server-mysqldb/centos8
 
 ### ลง Ubuntu ใน VMware
 - https://youtu.be/P9_TxAYZ20E
