@@ -10,7 +10,7 @@
     <![endif]-->
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Linux Server simple login system with mysql | simple-linux-server-mysqldb</title>
+<title>Basic login Centos8</title>
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Linux Server simple login system with mysql" />
 <meta property="og:locale" content="en_US" />
@@ -43,8 +43,8 @@
       <div class="inner">
 
         <header>
-          <h1>Linux Server simple login system with mysql</h1>
-          <h2>CentOS8</h2>
+          <h1>CentOS8</h1>
+          <h2>Linux Server simple login system with mysql</h2>
         </header>
         <section id="downloads" class="clearfix">
           
@@ -60,14 +60,12 @@
 
 <hr />
 
-<h1 id="centos-8">CentOS 8</h1>
-
-<h4 id="change-to-root">change to root</h4>
+<h2 id="change-to-root">change to root</h2>
 <pre>
 su
 </pre>
 
-<h4 id="update">update</h4>
+<h3 id="update">update</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum update -y
 </code></pre></div></div>
 
@@ -222,13 +220,13 @@ chmod 777 /usr/share/phpmyadmin/tmp
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart httpd
 </code></pre></div></div>
 
-<h6 id="user-mysql">user mysql</h6>
+<h5 id="user-mysql">user mysql</h5>
 <pre>
-mysql –u root –p
+  mysql or mysql –u root –p
 </pre>
 
 <pre>
-ALTER USER 'root'@'%' IDENTIFIED WITH myswl_native_password BY 'thisispassword';
+ALTER USER 'root'@'%' IDENTIFIED WITH myswl_native_password BY 'thispass';
 </pre>
 
 <h3 id="-หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์-phpmyadmin">( หากต้องการเปลี่ยนตำแหน่งโฟลเดอร์ phpmyadmin)</h3>
@@ -333,6 +331,116 @@ FLUSH PRIVILEGES;
 </code></pre></div></div>
 
 
+<h2 id="Basic Login">Basic Login</h2>
+
+<h3 id="ทำการสร้าง-database">ทำการสร้าง database</h3>
+
+<h4 id="use-mysql">use mysql</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -p -u root
+</code></pre></div></div>
+
+<h4 id="create-your-database">CREATE your Database</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE database mydatabase;
+</code></pre></div></div>
+
+<h4 id="use-your-database">USE your DATABASE</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>USE mydatabase;
+</code></pre></div></div>
+
+<h3 id="create-table">CREATE TABLE</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE `member` (
+  `UserID` int(3) unsigned zerofill NOT NULL auto_increment,
+  `Username` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Status` enum('ADMIN','USER') NOT NULL default 'USER',
+  PRIMARY KEY  (`UserID`),
+  UNIQUE KEY `Username` (`Username`)
+) ENGINE=MyISAM  AUTO_INCREMENT=3;
+</code></pre></div></div>
+
+<h4 id="insert-user-and-admin-data">INSERT USER AND ADMIN DATA</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO `member` VALUES (004, 'root', 'root', 'Mr Root Ubuntu', 'ADMIN');
+INSERT INTO `member` VALUES (005, 'codetopanda', 'ctp123', 'MR Codetopand Portdee', 'USER');
+</code></pre></div></div>
+
+<h4 id="exit-mysql-1">Exit mysql</h4>
+
+<pre>
+exit
+</pre>
+
+<hr />
+
+<h3 id="preparing-site-change-directory-to-varwwwhtml">Preparing site change directory to /var/www/html</h3>
+<h6 id="เปลี่ยนโฟล์เดอร์ไปที่-path-varwwwhtml">เปลี่ยนโฟล์เดอร์ไปที่ path /var/www/html</h6>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/html
+</code></pre></div></div>
+
+<h4 id="check-git-เพื่อความชัวร์ทำการเช็คว่า-linux-ท่านใช้-gitได้ไหม">check git เพื่อความชัวร์ทำการเช็คว่า linux ท่านใช้ gitได้ไหม</h4>
+
+<pre>
+git (if git not install ) then
+apt install git
+</pre>
+
+<h4 id="clone-git-in-varwwwhtml---move-all-file-to-varwwwhtml--remove-simple-linux-server-mysqldb-folder-">Clone git in /var/www/html |  Move all file to /var/www/html | remove simple-linux-server-mysqldb Folder |</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/lacakp/simple-linux-server-mysqldb.git; 
+  mv -f ./simple-linux-server-mysqldb/* ./ ; 
+  rm -f -r simple-linux-server-mysqldb;
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/clone.png" alt="Clone" style="width=400px" /></p>
+
+<h4 id="check-file-ทำการเช็คไฟล์ในโฟลเดอร์-">Check file (ทำการเช็คไฟล์ในโฟลเดอร์ )</h4>
+
+<pre>
+ls -al
+</pre>
+
+<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/ls-al.png" alt="ls-al" style="width=400px" /></p>
+
+<h4 id="nano-to-config-database--เข้าไปแก้ไข-เปลี่ยน-ip-user-password-database">nano to config database ( เข้าไปแก้ไข เปลี่ยน ip-user-password-database)</h4>
+<h4 id="ใน-tutorial-นี้ได้ตั้งไว้คือ-localhost3306-myuser-root1234-mydatabase-mysql-default-port-is-3306">ใน tutorial นี้ได้ตั้งไว้คือ (localhost:3306, myuser, root1234, mydatabase) MySQL default port is 3306</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano connectdb.php
+</code></pre></div></div>
+
+<h4 id="ใน centos อาจจะลองใช้เป็น">ใน centos อาจจะใช้ localhost</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><!-- connectdb.php -->
+
+  <?php
+  $dbServerName = "localhost"; // ip address (hostname -I)
+  $dbUsername = "myuser"; // username
+  $dbPassword = "root1234"; // db pass
+  $dbName = "mydatabase"; // your database to connect
+  
+  $con= mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName) or die("Error ! : " . mysqli_error($con));
+  mysqli_query($con, "SET NAMES 'utf8' ");
+  error_reporting( error_reporting() & ~E_NOTICE );
+  date_default_timezone_set('Asia/Bangkok');
+  ?>
+</code></pre></div></div>
+<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/nanoconnectdb.png" alt="login-page" style="width=400px" /></p>
+
+<h4 id="วิธี-save">วิธี save</h4>
+<pre>
+1. CTRL + x
+2. y
+3. Enter
+</pre>
+
+<h3 id="เข้าไปใน-192168xxxxxloginphp">เข้าไปใน 192.168.xx.xxx/login.php</h3>
+<p><img src="https://raw.githubusercontent.com/lacakp/simple-linux-server-mysqldb/site/images/loginphp.png" alt="login-page" style="width=400px" /></p>
+
+<hr />
 
 
 
