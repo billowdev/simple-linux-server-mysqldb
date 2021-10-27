@@ -1,5 +1,8 @@
 # Linux Server simple login system with mysql
 ##  Operating System Subject 
+### [Ubuntu Server + apache2](https://www.youtube.com/watch?v=P9_TxAYZ20E&t=1084s)
+### [ทดลองเซิร์ฟเวอร์ กับระบบล็อคอิน phpmyadmin - mysql ใน ubunt userver](https://www.youtube.com/watch?v=OFN-RVQfcuQ&t=212s)
+
 ###### VMware Ubuntu Server - phpmyadmin - mysql
 
 ##  [LEARNING SITE : w3schools](https://www.w3schools.com/)
