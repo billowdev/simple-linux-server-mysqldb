@@ -8,10 +8,10 @@
 
 ### Go to tutorial: 
 #### Ubuntu
-#### https://lacakira.github.io/simple-linux-server-mysqldb/
+#### https://billowdev.github.io/simple-linux-server-mysqldb/
 
 #### Centos8
-#### https://lacakira.github.io/simple-linux-server-mysqldb/centos8
+#### https://billowdev.github.io/simple-linux-server-mysqldb/centos8
 
 ### ลง Ubuntu ใน VMware
 - https://youtu.be/P9_TxAYZ20E
@@ -20,6 +20,6 @@
 - https://youtu.be/OFN-RVQfcuQ
 
 ### Repository-site
-### https://github.com/lacakira/simple-linux-server-mysqldb/tree/site
+### https://github.com/billowdev/simple-linux-server-mysqldb/tree/site
 
 
