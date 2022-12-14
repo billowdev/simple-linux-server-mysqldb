@@ -12,5 +12,5 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 -- 
 
-INSERT INTO `member` VALUES (001, 'win', 'win123', 'Weerachai Nukitram', 'USER');
-INSERT INTO `member` VALUES (002, 'chai', 'chai123', 'Surachai Sirisart', 'ADMIN');
+INSERT INTO `member` VALUES (001, 'test1', 'test1234', 'test user', 'USER');
+INSERT INTO `member` VALUES (002, 'test2', 'test1234', 'test admin', 'ADMIN');
